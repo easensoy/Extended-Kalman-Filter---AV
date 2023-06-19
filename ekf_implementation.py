@@ -1,10 +1,11 @@
 import pickle
 import numpy as np
 import matplotlib.pyplot as plt
-'''
+
+
 #To see what the pickle file contains do the following
 objects = []
-with (open('data/data.pickle', 'rb')) as openfile:
+with (open('data.pickle', 'rb')) as openfile:
     while True:
         try:
             objects.append(pickle.load(openfile))
@@ -12,9 +13,9 @@ with (open('data/data.pickle', 'rb')) as openfile:
             break
             
 print(objects)
-'''
 
-with open('extracted_data.pickle', 'rb') as f:
+
+with open('data.pickle', 'rb') as f:
     data = pickle.load(f)
 
 t = data['t']  # timestamps [s]
